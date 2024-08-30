@@ -1,0 +1,320 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+ul.products {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+  width: 100%; /* Ensure full width */
+  max-width: none; /* Override any max-width */
+}
+
+.woocommerce ul.products[class*="columns-"] li.product,
+.woocommerce-page ul.products[class*="columns-"] li.product {
+  @apply w-full m-0 border-3 border-dixie-black;
+}
+
+.woocommerce ul.products li.product a img {
+  @apply w-full h-auto block mb-0 shadow-none rounded-t-lg border-b-3;
+  /* If 'dixie-black' is a custom color in your Tailwind config: */
+  @apply border-dixie-black;
+  /* If not, use a Tailwind color, e.g., 'border-black': */
+  /* @apply border-black; */
+}
+
+.woocommerce-page ul.products li.product {
+  @apply w-full rounded-xl bg-dixie-pine hover:opacity-95;
+}
+.woocommerce ul.products::before {
+  @apply hidden;
+}
+.woocommerce ul.products::after {
+  @apply hidden;
+}
+
+.woocommerce-loop-product__title {
+  @apply font-chivo-bold;
+}
+
+.woocommerce-Price-amount bdi {
+  @apply font-aglet-sans text-dixie-black text-sm;
+}
+
+.woocommerce ul.products li.product .add_to_cart_button {
+  border: none;
+  border: 3px solid #131313 !important;
+  color: #131313;
+  font-family: aglet-sans;
+  font-size: 0.8rem;
+
+  &:hover {
+    background-color: #3f61ac;
+    color: #131313;
+  }
+  /* Add other styles you wish to retain or override, if any */
+}
+
+.woocommerce ul.products li.product .add_to_cart_button {
+  @apply border-3 border-dixie-black  bg-dixie-pine rounded-lg;
+}
+
+.woocommerce ul.products li.product .added_to_cart {
+  @apply ml-2 font-aglet-sans text-xs;
+}
+
+.woocommerce-breadcrumb {
+  @apply max-w-320 mx-auto font-aglet-sans  text-dixie-black mt-4 px-4;
+}
+.woocommerce-breadcrumb a {
+  @apply max-w-320 mx-auto font-aglet-sans text-dixie-black mt-4;
+}
+
+.woocommerce:where(body:not(.woocommerce-uses-block-theme))
+  .woocommerce-breadcrumb {
+  @apply text-dixie-royal px-8;
+}
+
+.woocommerce-result-count {
+  @apply font-aglet-sans;
+}
+
+.woocommerce .woocommerce-ordering select {
+  @apply border-3 border-dixie-black rounded font-aglet-sans p-1 bg-dixie-mint;
+}
+
+.woocommerce .single_add_to_cart_button {
+  @apply bg-dixie-mint;
+}
+
+.woocommerce .quantity .qty {
+  @apply text-center border-2 rounded-lg;
+  width: 3.631em;
+  height: 35.7px;
+  background-color: #cbd2cd;
+  border: 3px solid #131313;
+  font-family: "aglet-sans";
+}
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+  button.button.alt {
+  @apply bg-dixie-mint border-3 border-dixie-black;
+  border: none;
+  border: 3px solid #131313 !important;
+  color: #131313;
+  font-family: aglet-sans;
+  font-size: 0.8rem;
+  border-radius: 7px;
+  height: 35.7px;
+
+  &:hover {
+    background-color: #3f61ac;
+    color: #131313;
+  }
+}
+
+.woocommerce-notices-wrapper
+  .wc-block-components-notice-banner.is-success
+  > svg {
+  background-color: #3f61ac;
+}
+
+.wc-block-components-notice-banner > svg {
+  fill: #fff;
+  background-color: #2f2f2f;
+  border-radius: 50%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 100%;
+  padding: 2px;
+}
+
+.woocommerce-notices-wrapper .wc-block-components-notice-banner.is-success {
+  background-color: #5f8962;
+  border: 3px solid #131313;
+  font-family: aglet-sans;
+}
+
+.woocommerce-main-image img {
+  border: 3px solid #131313;
+  border-radius: 7px;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid #080808;
+  z-index: 4;
+}
+
+.attachment-shop_thumbnail {
+  border-radius: 7px;
+  height: auto;
+}
+
+.woocommerce-Tabs-panel ul {
+  @apply list-disc list-inside ml-6 mb-8 font-aglet-sans;
+}
+.woocommerce-Tabs-panel h2 {
+  @apply font-chivo-bold text-md mb-4 pb-0;
+}
+.woocommerce-Tabs-panel h3 {
+  @apply font-chivo-bold text-sm mb-4 pb-0;
+}
+
+.woocommerce-Tabs-panel img {
+  @apply mb-8 w-6/12 border-l-3 border-b-3 border-dixie-black rounded-xl;
+}
+.product-details {
+  @apply p-4;
+}
+
+.product {
+  /* @apply p-8; */
+}
+
+.headline h1 {
+  @apply uppercase;
+}
+
+.content-area {
+  @apply w-full max-w-full mx-0;
+}
+
+.content a {
+  @apply text-dixie-royal font-semibold font-aglet-sans;
+}
+
+.content h2 {
+  @apply font-chivo-bold text-md mb-4 pb-0;
+}
+.content h3 {
+  @apply font-chivo-bold text-sm mb-4 pb-0;
+}
+.content p {
+  @apply font-aglet-sans text-base mb-8;
+}
+
+.content ul {
+  @apply list-disc list-inside ml-6 mb-8 font-aglet-sans;
+}
+
+.content blockquote {
+  @apply border-3 border-dixie-black bg-dixie-pine p-4 mb-8 rounded-xl;
+}
+
+.content blockquote p {
+  @apply mb-0 italic;
+}
+
+.content mark {
+  @apply bg-dixie-black text-dixie-mint !important;
+}
+
+.main-content img {
+  @apply mb-8 w-full border-l-3 border-b-3 border-dixie-black rounded-xl;
+}
+
+header nav ul li {
+  @apply text-dixie-black;
+  @apply hover:underline hover:text-dixie-royal;
+}
+
+header .menu-item a {
+  @apply text-dixie-black font-aglet-sans hover:text-dixie-royal;
+}
+.menu-item a {
+  @apply text-dixie-mint font-aglet-sans hover:text-dixie-royal;
+}
+
+.page-numbers {
+  @apply flex gap-2;
+}
+
+/* In your custom CSS file or style tag */
+.grayscale-100 {
+  filter: grayscale(100%);
+}
+
+.grayscale-0:hover {
+  filter: grayscale(0%);
+}
+
+/* In your custom CSS file or style tag */
+.pagination-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px; /* Adjust as needed */
+  height: 30px; /* Adjust as needed */
+  border: 2px solid #131313; /* Border color */
+  border-radius: 50%; /* For circle shape */
+  margin-right: 5px; /* Adjust spacing between pagination links */
+  transition: all 0.2s ease-in-out; /* Transition effect */
+  font-size: 0.8rem;
+}
+
+.pagination-link:hover {
+  background-color: #3f61ac; /* Background color on hover */
+  color: #cbd2cd; /* Text color on hover */
+}
+
+@font-face {
+  font-family: "chivo-bold";
+  src: url("../fonts/Chivo-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "chivo-bold-italic";
+  src: url("../fonts/Chivo-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "chivo";
+  src: url("../fonts/Chivo-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.swiper-button-next {
+  right: 0;
+  border-left: 3px solid black;
+}
+.swiper-button-prev {
+  left: 0;
+  border-right: 3px solid black;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1rem;
+}
+
+.swiper-pagination-bullet {
+  background-color: #3f61ac;
+}
+
+.swiper-pagination {
+  margin-bottom: 2rem;
+}
+
+/* .video-container {
+  position: relative;
+  width: 100%;
+
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */

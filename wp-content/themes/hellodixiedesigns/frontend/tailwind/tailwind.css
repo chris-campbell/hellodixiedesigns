@@ -1,0 +1,189 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  @apply bg-dixie-mint;
+}
+
+.headline h1 {
+  @apply capitalize;
+}
+
+.headline p {
+  @apply font-aglet-sans italic text-base leading-5;
+}
+.content a {
+  @apply text-dixie-royal font-semibold;
+}
+.content h2 {
+  @apply font-chivo-bold text-md mb-4 pb-0 capitalize;
+}
+.content h2 a {
+  @apply font-chivo-bold text-md mb-4 pb-0 capitalize;
+}
+.content h3 {
+  @apply font-chivo-bold text-sm mb-4 pb-0 capitalize;
+}
+.content h3 a {
+  @apply font-chivo-bold text-sm mb-4 pb-0 capitalize;
+}
+.content h4 {
+  @apply font-chivo-bold text-base mb-4 pb-0 capitalize;
+}
+.content h4 a {
+  @apply font-chivo-bold text-base mb-4 pb-0 capitalize;
+}
+.content p {
+  @apply font-aglet-sans font-normal text-xs leading-7 mb-8;
+}
+
+.content ul {
+  @apply list-none list-inside ml-6 mb-8 font-aglet-sans font-normal;
+}
+
+.content ul li {
+  @apply flex mb-2 items-center;
+}
+.content ul ol {
+  @apply flex mb-2 items-center;
+}
+
+.content ul li::before {
+  content: "° ";
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.content ol {
+  @apply list-decimal list-inside ml-6 mb-8 font-aglet-sans font-normal;
+}
+
+.content ol li {
+  @apply mb-2;
+}
+
+.content blockquote {
+  @apply border-3 border-dixie-black bg-dixie-pine p-4 mb-8 rounded-xl font-aglet-sans font-normal;
+}
+
+.content blockquote p {
+  @apply mb-0 italic font-aglet-sans font-normal;
+}
+
+.content mark {
+  @apply bg-dixie-black text-dixie-mint !important;
+}
+
+.main-content img {
+  @apply mb-8 w-full border-l-3 border-b-3 border-dixie-black rounded-xl;
+}
+
+header nav ul li {
+  @apply text-dixie-black font-aglet-sans font-normal;
+  @apply hover:text-dixie-royal hover:font-semibold;
+}
+
+header .menu-item a {
+  @apply text-dixie-black font-aglet-sans font-normal hover:text-dixie-royal;
+}
+.menu-item a {
+  @apply text-dixie-mint font-aglet-sans font-normal hover:text-dixie-royal;
+}
+
+.page-numbers {
+  @apply flex gap-2;
+}
+
+/* In your custom CSS file or style tag */
+.grayscale-100 {
+  filter: grayscale(100%);
+}
+
+.grayscale-0:hover {
+  filter: grayscale(0%);
+}
+
+.content-area {
+  @apply max-w-320 mx-auto;
+}
+
+.woocommerce-product-details__short-description span dbi {
+  @apply text-dixie-black;
+}
+
+/* In your custom CSS file or style tag */
+.pagination-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px; /* Adjust as needed */
+  height: 30px; /* Adjust as needed */
+  border: 2px solid #131313; /* Border color */
+  border-radius: 50%; /* For circle shape */
+  margin-right: 5px; /* Adjust spacing between pagination links */
+  transition: all 0.2s ease-in-out; /* Transition effect */
+  font-size: 0.8rem;
+}
+
+.pagination-link:hover {
+  background-color: #3f61ac; /* Background color on hover */
+  color: #cbd2cd; /* Text color on hover */
+}
+
+@font-face {
+  font-family: "chivo-bold";
+  src: url("../fonts/Chivo-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "chivo-bold-italic";
+  src: url("../fonts/Chivo-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "chivo";
+  src: url("../fonts/Chivo-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.swiper-button-next {
+  right: 0;
+  border-left: 3px solid black;
+}
+.swiper-button-prev {
+  left: 0;
+  border-right: 3px solid black;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1rem;
+}
+
+.swiper-pagination-bullet {
+  background-color: #3f61ac;
+}
+
+.hover-effect:hover .image-effect {
+  filter: grayscale(0%);
+}
+
+/* div[class*="simplesocialbuttons-float"].simplesocialbuttons.simplesocial-round-icon button {
+  background-color: #CBD2CE !important;
+  border-color: #131313 !important;
+  color: #131313 !important;
+  font-size: 0.6rem !important;
+}
+
+div.simplesocialbuttons.simplesocialbuttons-float-left-center {
+  left: 8px;
+} */

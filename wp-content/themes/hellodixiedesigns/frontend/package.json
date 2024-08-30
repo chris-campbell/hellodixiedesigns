@@ -1,0 +1,25 @@
+{
+  "name": "hellodixiedesigns",
+  "version": "1.0.0",
+  "description": "Hello Dixie Designs",
+  "scripts": {
+    "tailwind": "tailwindcss build -i ./tailwind/tailwind.css --output ./dist/main.min.css --minify",
+    "esbuild": "esbuild ./ts/main.ts --outfile=dist/main.min.js --bundle --minify",
+    "watch-css": "tailwindcss -i ./tailwind/tailwind.css --output ./dist/main.css --watch",
+    "watch-js": "esbuild ./ts/main.ts --outfile=dist/main.js --bundle",
+    "dev": "concurrently npm:watch-css npm:watch-js",
+    "build": "npm run tailwind && npm run esbuild",
+    "lint": "npx eslint . --fix",
+    "lint:ts": "npx eslint ./ts/**/*.ts --fix",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "concurrently": "8.0.1",
+    "esbuild": "0.17.11",
+    "eslint": "^8.45.0",
+    "husky": "^9.0.10",
+    "tailwindcss": "^3.3.2"
+  }
+}

@@ -1,0 +1,26 @@
+*~
+.DS_Store
+.svn
+.cvs
+.env
+*.bak
+*.swp
+Thumbs.db
+.sass-cache
+node_modules
+package-lock.json
+
+# wordpress specific
+wp-content/garbage/
+wp-content/uploads/
+wp-content/plugins/
+wp-content/blogs.dir/
+wp-content/upgrade/*
+wp-content/backup-db/*
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/cache/*
+wp-content/debug.log
+
+#frontend
+wp-content/themes/helldixiedesigns/frontend/dist/
