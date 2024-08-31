@@ -6,7 +6,7 @@ $desktop_logo = get_stylesheet_directory_uri() . '/frontend/images/typing.png';
     <div class="flex justify-center items-center md:border-b-0 border-b-3 border-dixie-black">
         <div class="max-w-244 px-8 py-8 md:p-16">
             <p class="font-aglet-sans font-semibold text-dixie-royal mb-2 max-w-148 text-xs">Feature Article</p>
-            <h1 class="font-chivo-bold pb-6 md-2:text-xl text-lg-2 capitalize">
+            <h1 class="font-chivo-bold pb-6 md-2:text-4xl text-lg-2 capitalize">
                 <?php the_field('featured_brand_title'); ?>
             </h1>
             <p class="font-aglet-sans pb-6 max-w-148 text-xs"><?php the_field('featured_article_description'); ?></p>
